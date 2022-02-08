@@ -228,7 +228,7 @@ public class CartActivity extends AppCompatActivity {
                     .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create())).build();
             //Instance of Interface
             MpesaInterface mpesaInterface = retrofit.create(MpesaInterface.class);
-            String basicToken = "Basic WFhIYlV2Z1BZYWQ4dlh2ODV5WkEyS21HZEN2OUUyVEM6elo0bVZSakNqV285aGc4Sg==";
+            String basicToken = "";//Enter your basic token from Daraja
             Call<MpesaModel> call = mpesaInterface.getData(basicToken);
             call.enqueue(new Callback<MpesaModel>() {
                 @RequiresApi(api = Build.VERSION_CODES.O)
@@ -243,7 +243,7 @@ public class CartActivity extends AppCompatActivity {
                     String businessCode = "174379";
                     String amt = "1";
                     String code = String.valueOf(businessCode);
-                    String passKey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
+                    String passKey = "Enter your passkey";
                     SimpleDateFormat df1 = new SimpleDateFormat("YYYYMMddhhmmss");
                     String timme = df1.format(timestamp);
                     String combine = code+passKey+timme;
